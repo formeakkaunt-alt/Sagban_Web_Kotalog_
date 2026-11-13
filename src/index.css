@@ -219,3 +219,18 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #5C1A24;
 }
+
+/* Completely hide any Netlify badge, HUD or feedback drawer */
+[data-netlify-drawer],
+[data-netlify-hud],
+#netlify-drawer,
+#netlify-hud,
+netlify-feedback-drawer,
+div[class*="netlify-hud"],
+div[class*="netlify-drawer"],
+iframe[src*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
