@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-cream: #FAF7F2;
+    --accent-burgundy: #5C1A24;
+    --accent-burgundy-hover: #48131B;
+    --text-primary: #261619;
+    --text-muted: #7A5B60;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #261619;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom premium subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 450ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Glass sheen: a light streak sweeping across the card while it flips */
+@keyframes sheenSweep {
+  0%   { transform: translateX(-140%) skewX(-22deg); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateX(380%) skewX(-22deg); opacity: 0; }
+}
+
+.sheen-bar {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  left: 0;
+  width: 32%;
+  opacity: 0;
+  pointer-events: none;
+  animation: sheenSweep 700ms cubic-bezier(0.4, 0, 0.2, 1) 180ms forwards;
+}
+
+/* On the white photo side: a soft warm glare (white would be invisible on white) */
+.sheen-bar-light {
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.55) 35%,
+    rgba(222, 186, 120, 0.42) 50%,
+    rgba(255, 255, 255, 0.55) 65%,
+    rgba(255, 255, 255, 0) 100%);
+}
+
+/* On the dark burgundy info side: bright white streak */
+.sheen-bar-dark {
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0.28) 65%,
+    rgba(255, 255, 255, 0) 100%);
+}
+
+/* Back side of the product card: lines fade up one after another */
+@keyframes backReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.back-reveal {
+  opacity: 0;
+  animation: backReveal 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-reveal { animation: none; opacity: 1; }
+}
+
+/* 3D Book Page Flip Transition */
+.book-stage {
+  perspective: 2600px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+
+@keyframes bookPageTurnForward {
+  0% {
+    transform: rotateY(0deg) translateZ(0);
+    box-shadow: 0 4px 20px rgba(58, 28, 32, 0.06);
+    opacity: 1;
+  }
+  30% {
+    transform: rotateY(-38deg) translateZ(35px) scale(0.985);
+    box-shadow: -24px 18px 45px rgba(58, 28, 32, 0.22);
+    opacity: 0.98;
+  }
+  65% {
+    transform: rotateY(-105deg) translateZ(30px) scale(0.97);
+    box-shadow: -35px 15px 40px rgba(58, 28, 32, 0.16);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateY(-180deg) translateZ(0);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes bookPageTurnBackward {
+  0% {
+    transform: rotateY(-180deg) translateZ(0);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  35% {
+    transform: rotateY(-105deg) translateZ(30px) scale(0.97);
+    box-shadow: 35px 15px 40px rgba(58, 28, 32, 0.16);
+    opacity: 0.7;
+  }
+  70% {
+    transform: rotateY(-38deg) translateZ(35px) scale(0.985);
+    box-shadow: 24px 18px 45px rgba(58, 28, 32, 0.22);
+    opacity: 0.98;
+  }
+  100% {
+    transform: rotateY(0deg) translateZ(0);
+    opacity: 1;
+    box-shadow: 0 4px 20px rgba(58, 28, 32, 0.06);
+  }
+}
+
+@keyframes bookPageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateX(20px);
+    filter: brightness(0.92);
+  }
+  40% {
+    opacity: 0.7;
+    filter: brightness(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    filter: brightness(1);
+  }
+}
+
+.animate-book-flip-forward {
+  transform-origin: left center;
+  animation: bookPageTurnForward 780ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  backface-visibility: hidden;
+  will-change: transform, opacity, box-shadow;
+}
+
+.animate-book-flip-backward {
+  transform-origin: right center;
+  animation: bookPageTurnBackward 780ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  backface-visibility: hidden;
+  will-change: transform, opacity, box-shadow;
+}
+
+.animate-book-reveal {
+  animation: bookPageReveal 780ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 60ms; }
+.stagger-2 { animation-delay: 120ms; }
+.stagger-3 { animation-delay: 180ms; }
+.stagger-4 { animation-delay: 240ms; }
+.stagger-5 { animation-delay: 300ms; }
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #DECAB7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5C1A24;
+}
