@@ -451,9 +451,10 @@ export const SALOM_PRODUCTS = {
     { id: 'sal-sos-3', image: '/images/products/sosiski-sardelki/sosiski-tigr-neo-ms-salom.jpg', isPlaceholder: false, index: 3 },
     { id: 'sal-sos-4', image: '/images/products/sosiski-sardelki/sosiski-delikatesnye-ms-salom.jpg', isPlaceholder: false, index: 4 },
     { id: 'sal-sos-5', image: '/images/products/sosiski-sardelki/egerskie-sosiski-ms-salom-700g.jpg', isPlaceholder: false, index: 5 },
-    { id: 'sal-sos-6', image: '/images/products/sosiski-sardelki/sosiski-raduga-salom-400g.jpg', isPlaceholder: false, index: 6 },
-    { id: 'sal-sos-7', image: '/images/products/sosiski-sardelki/sosiski-piramida-salom-600g.jpg', isPlaceholder: false, index: 7 },
-    { id: 'sal-sos-8', image: '/images/products/sosiski-sardelki/sosiski-salom-farms-360g.jpg', isPlaceholder: false, index: 8 },
+    { id: 'sal-sos-6', image: '/images/products/sosiski-sardelki/sosiski-molochnye-salom-450g.jpg', isPlaceholder: false, index: 6 },
+    { id: 'sal-sos-7', image: '/images/products/sosiski-sardelki/sosiski-raduga-salom-400g.jpg', isPlaceholder: false, index: 7 },
+    { id: 'sal-sos-8', image: '/images/products/sosiski-sardelki/sosiski-piramida-salom-600g.jpg', isPlaceholder: false, index: 8 },
+    { id: 'sal-sos-9', image: '/images/products/sosiski-sardelki/sosiski-salom-farms-360g.jpg', isPlaceholder: false, index: 9 },
   ],
   'kopchenaya-kolbasa': [
     { id: 'sal-kop-1', image: '/images/products/kopchenaya-kolbasa/okhotnichi-kolbaski-ms-salom-200g.jpg', isPlaceholder: false, index: 1 },
