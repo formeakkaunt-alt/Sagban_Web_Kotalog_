@@ -8,7 +8,7 @@ export default function ProductImageCard({ item, index, onClick }) {
       style={{ animationDelay: `${(index % 6) * 60}ms` }}
     >
       {/* Inner Image Container / Frame */}
-      <div className="relative aspect-[4/3] sm:aspect-square w-full rounded-xl sm:rounded-2xl overflow-hidden bg-cream-100/60 flex items-center justify-center border border-cream-200">
+      <div className="relative aspect-[4/3] sm:aspect-square w-full rounded-xl sm:rounded-2xl overflow-hidden bg-white flex items-center justify-center border border-cream-200/50">
         
         {item.image ? (
           <img
