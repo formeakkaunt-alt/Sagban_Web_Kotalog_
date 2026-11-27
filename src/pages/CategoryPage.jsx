@@ -45,12 +45,12 @@ export default function CategoryPage({ categorySlug, activeCatalog, onBack }) {
     <div className="relative min-h-[calc(100vh-200px)]">
       
       {/* Light Atmospheric Background Photo if available */}
-      {category.pageBgImage && !isSalomOpen && (
+      {((!isSalomOpen && category.pageBgImage) || (isSalomOpen && category.salomPageBgImage)) && (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
           <img 
-            src={category.pageBgImage} 
+            src={isSalomOpen ? category.salomPageBgImage : category.pageBgImage} 
             alt="" 
-            className="w-full h-full object-cover object-center opacity-25 filter blur-[0.5px] scale-105"
+            className="w-full h-full object-cover object-center opacity-30 filter blur-[0.5px] scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-cream-50/70 via-cream-50/40 to-cream-50/80"></div>
         </div>

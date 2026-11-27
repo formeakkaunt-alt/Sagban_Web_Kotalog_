@@ -44,6 +44,7 @@ export const CATEGORIES = [
     tagline: 'Сочный и аппетитный',
     bgImage: '/images/categories/sosiski-sardelki.jpg',
     pageBgImage: '/images/incoming/sosiski-sardelki-bg.jpg',
+    salomPageBgImage: '/images/incoming/salom-sosiski-sardelki-bg.jpg',
   },
   {
     slug: 'kopchenaya-kolbasa',
