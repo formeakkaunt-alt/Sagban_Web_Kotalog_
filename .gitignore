@@ -5,3 +5,6 @@ dist-ssr
 .DS_Store
 /*.pdf
 *.log
+saved_photos/
+.original_backup/
+saved_straight_images/
