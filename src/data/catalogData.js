@@ -68,6 +68,7 @@ export const CATEGORIES = [
     shortTitle: 'Нарезки',
     tagline: 'Тонкий и удобный',
     bgImage: '/images/categories/narezki.jpg',
+    pageBgImage: '/images/incoming/narezki-bg.jpg',
   },
 ];
 
