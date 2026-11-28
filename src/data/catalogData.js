@@ -164,6 +164,15 @@ const TRANCH_DETAILS = {
   weight: '100 г',
 };
 
+const BEKON_GOVYAZHYI_DETAILS = {
+  title: 'Говяжий бекон',
+  subtitle: 'Варёно-копчёное изделие · Высший сорт',
+  composition: 'говядина, соль поваренная пищевая, специи',
+  storage: 'от +2 °C до +6 °C',
+  shelfLife: 'не более 30 суток',
+  weight: '150 г',
+};
+
 // Каталог фотографий для каждой категории (плейсхолдеры для первого этапа)
 export const PRODUCTS_DATA = {
   sagban: {
@@ -284,9 +293,10 @@ export const PRODUCTS_DATA = {
       { id: 'sag-nar-6', image: '/images/products/narezki/sheyka-syrokopcheny-delikates-100g.jpg', isPlaceholder: false, index: 6 },
       { id: 'sag-nar-7', image: '/images/products/narezki/basturma-syrovyaleny-delikates-100g.jpg', isPlaceholder: false, index: 7, details: BASTURMA_DETAILS },
       { id: 'sag-nar-8', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g.jpg', isPlaceholder: false, index: 8, details: BRESAOLA_1_DETAILS },
-      { id: 'sag-nar-9', image: '/images/products/narezki/salyami-mini-100g.jpg', isPlaceholder: false, index: 9, details: SALYAMI_MINI_DETAILS },
-      { id: 'sag-nar-10', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g-2.jpg', isPlaceholder: false, index: 10, details: BRESAOLA_2_DETAILS },
-      { id: 'sag-nar-11', image: '/images/products/narezki/tranch-delikates-iz-koniny-100g.jpg', isPlaceholder: false, index: 11, details: TRANCH_DETAILS },
+      { id: 'sag-nar-9', image: '/images/products/narezki/bekon-govyazhyi-sagban-150g.jpg', isPlaceholder: false, index: 9, details: BEKON_GOVYAZHYI_DETAILS },
+      { id: 'sag-nar-10', image: '/images/products/narezki/salyami-mini-100g.jpg', isPlaceholder: false, index: 10, details: SALYAMI_MINI_DETAILS },
+      { id: 'sag-nar-11', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g-2.jpg', isPlaceholder: false, index: 11, details: BRESAOLA_2_DETAILS },
+      { id: 'sag-nar-12', image: '/images/products/narezki/tranch-delikates-iz-koniny-100g.jpg', isPlaceholder: false, index: 12, details: TRANCH_DETAILS },
     ],
   },
   premiyum: {
@@ -397,9 +407,10 @@ export const PRODUCTS_DATA = {
       { id: 'prem-nar-6', image: '/images/products/narezki/sheyka-syrokopcheny-delikates-100g.jpg', isPlaceholder: false, index: 6 },
       { id: 'prem-nar-7', image: '/images/products/narezki/basturma-syrovyaleny-delikates-100g.jpg', isPlaceholder: false, index: 7, details: BASTURMA_DETAILS },
       { id: 'prem-nar-8', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g.jpg', isPlaceholder: false, index: 8, details: BRESAOLA_1_DETAILS },
-      { id: 'prem-nar-9', image: '/images/products/narezki/salyami-mini-100g.jpg', isPlaceholder: false, index: 9, details: SALYAMI_MINI_DETAILS },
-      { id: 'prem-nar-10', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g-2.jpg', isPlaceholder: false, index: 10, details: BRESAOLA_2_DETAILS },
-      { id: 'prem-nar-11', image: '/images/products/narezki/tranch-delikates-iz-koniny-100g.jpg', isPlaceholder: false, index: 11, details: TRANCH_DETAILS },
+      { id: 'prem-nar-9', image: '/images/products/narezki/bekon-govyazhyi-sagban-150g.jpg', isPlaceholder: false, index: 9, details: BEKON_GOVYAZHYI_DETAILS },
+      { id: 'prem-nar-10', image: '/images/products/narezki/salyami-mini-100g.jpg', isPlaceholder: false, index: 10, details: SALYAMI_MINI_DETAILS },
+      { id: 'prem-nar-11', image: '/images/products/narezki/bresaola-syrovyaleny-delikates-100g-2.jpg', isPlaceholder: false, index: 11, details: BRESAOLA_2_DETAILS },
+      { id: 'prem-nar-12', image: '/images/products/narezki/tranch-delikates-iz-koniny-100g.jpg', isPlaceholder: false, index: 12, details: TRANCH_DETAILS },
     ],
   }
 };
